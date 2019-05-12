@@ -1,0 +1,49 @@
+{
+  "name": "svelte-preprocess-css-global",
+  "version": "0.0.1",
+  "description": "A Svelte preprocessor to create global prefixed css and postcss styles.",
+  "main": "src/index.js",
+  "repository": "git@github.com:aheissenberger/svelte-preprocess-css-global.git",
+  "keywords": [
+    "svelte",
+    "preprocess",
+    "css",
+    "postccs"
+  ],
+  "author": "Andreas Heissenberger <andreas@heissenberger.at>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --no-cache --verbose",
+    "test:watch": "jest --no-cache --verbose --watchAll",
+    "lint": "eslint \"src/**/*.js\"",
+    "format": "prettier --loglevel silent --write \"src/**/*.js\" && eslint --fix \"src/**/*.js\"",
+    "prepublishOnly": "npm run format && npm run test"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.js",
+      "!**/node_modules/**"
+    ]
+  },
+  "peerDependencies": {
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "postcss": "^7.0.16",
+    "postcss-import": "^12.0.1",
+    "postcss-selector-parser": "^6.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.17.0"
+  }
+}
